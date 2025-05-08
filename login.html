@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        .top-nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .top-nav .logo span {
+            color: #ff6347;
+        }
+
+        .top-nav .user-actions a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .top-nav .user-actions a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Navigation Styles */
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            background-color: #222;
+            margin: 20px 0;
+        }
+
+        .main-nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        .main-nav a:hover {
+            background-color: #ff6347;
+        }
+
+        /* Rewards Banner Styles */
+        .rewards-banner {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .rewards-banner a {
+            color: #ff6347;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .rewards-banner a:hover {
+            text-decoration: underline;
+        }
+
+        /* Login Form Styles */
+        h1 {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 28px;
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        form input:focus {
+            border-color: #ff6347;
+            outline: none;
+        }
+
+        form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff6347;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #e5533a;
+        }
+
+        form a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        form a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #222;
+            color: #fff;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+
+        .footer .footer-links {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .footer .footer-column {
+            width: 30%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .footer .footer-column h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .footer .footer-column a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .footer .footer-column a:hover {
+            color: #ff6347;
+        }
+
+        .footer .footer-column i {
+            margin-right: 8px;
+        }
+
+        .footer .footer-bottom {
+            text-align: center;
+            font-size: 14px;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+        }
+
+        .footer .footer-bottom p {
+            margin: 10px 0;
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 768px) {
+            .footer .footer-column {
+                width: 48%;
+                margin-bottom: 20px;
+            }
+
+            .footer .footer-column h4 {
+                font-size: 16px;
+            }
+
+            .footer .footer-column a {
+                font-size: 14px;
+            }
+
+            .footer .footer-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer .footer-column {
+                width: 100%;
+            }
+
+            .footer .footer-bottom {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation -->
+    <header class="top-nav">
+        <div class="logo">Sing<span>To Happy</span></div>
+        <div class="user-actions">
+            <a href="login.html"> Sign In </a>
+            <a href="register.html">Sign Up</a>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <a href="home.html">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Gallery</a>
+        <a href="#">Internship Reg</a>
+    </nav>
+
+    <!-- Rewards Banner -->
+    <section class="rewards-banner">
+        <h2>Let's sing good to be happy.</h2>
+        <p>Singers get more. <a href="https://docs.google.com/forms/d/e/1FAIpQLSdieq-WNOrqRtKwNEFN8mZulXqDOEqNMtlpWJ2ooH8BAnd6Dw/viewform">Join US Today</a></p>
+    </section>
+
+    <h1>Sign In</h1>
+    <form method="POST">
+        <input type="text" name="fname" placeholder="First name" required>
+        <input type="text" name="lname" placeholder="Last Name" required>
+        <input type="number" name="age" placeholder="Place here your age" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>ABOUT US</h4>
+                <a href="#">Who We Are</a>
+                <a href="#">Careers</a>
+                <a href="#">Investors</a>
+                <a href="#">Newsroom</a>
+                <a href="#">Sustainability</a>
+            </div>
+
+            <div class="footer-column">
+                <h4> SERVICES</h4>
+                <a href="#">Internship</a>
+                <a href="#">Templates</a>
+                <a href="#">Branding</a>
+                <a href="#">Pro Services</a>
+                <a href="#">Networking Essentials</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>CONNECT WITH US</h4>
+                <a href="https://x.com" target="_blank" class="x"><i class="fab fa-x-twitter"></i>X (Twitter)</a>
+                <a href="https://instagram.com" target="_blank" class="instagram"><i class="fab fa-instagram"></i>Instagram</a>
+                <a href="https://facebook.com" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i>Facebook</a>
+                <a href="https://youtube.com" target="_blank" class="youtube"><i class="fab fa-youtube"></i>Youtube</a>
+                <a href="https://linkedin.com" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
